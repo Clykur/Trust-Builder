@@ -1,0 +1,223 @@
+Create a modern, high-trust, professional validation website for a decentralized trust-based freelance platform.
+
+Goal:
+
+Validate a trust infrastructure idea between freelancers and clients using:
+
+- Legal protection
+
+- Zero-loss escrow
+
+- AI verification
+
+- Blockchain reputation
+
+- Nearby freelancer discovery
+
+Website Style:
+
+- Clean
+
+- Minimal
+
+- Trust-focused
+
+- Professional
+
+- Investor-grade
+
+- Startup SaaS look
+
+- Neutral colors (white, blue, dark gray)
+
+- Premium fintech aesthetic
+
+- High credibility visual language
+
+Pages:
+
+1) Landing Page
+
+   - Headline: "Trust First. Work Without Fear."
+
+   - Subtext: "A new trust system for freelancers and clients where no one loses."
+
+   - CTA buttons:
+
+     - "Join as Freelancer"
+
+     - "Join as Client"
+
+     - "Request Early Access"
+
+2) Problem Section
+
+   - Clients fear scams
+
+   - Freelancers fear non-payment
+
+   - Fake reviews
+
+   - Platform manipulation
+
+   - No legal safety
+
+   - No real trust layer
+
+3) Solution Section
+
+   - Legal-backed agreements
+
+   - Zero-loss escrow system
+
+   - AI verification engine
+
+   - Blockchain reputation ledger
+
+   - Nearby freelancer trust model
+
+4) How It Works
+
+   Step 1: Client creates contract  
+
+   Step 2: Funds locked in escrow  
+
+   Step 3: Freelancer delivers work  
+
+   Step 4: AI verifies delivery  
+
+   Step 5: Mutual approval  
+
+   Step 6: Auto payment release  
+
+   Step 7: Reputation token minted  
+
+5) Trust Layers
+
+   - Legal Trust
+
+   - Financial Trust
+
+   - AI Trust
+
+   - Blockchain Trust
+
+   - Proximity Trust
+
+6) Use Cases
+
+   - Local freelancers
+
+   - Remote freelancers
+
+   - Startups
+
+   - Agencies
+
+   - Enterprises
+
+   - Legal consultants
+
+   - Designers
+
+   - Developers
+
+7) Validation Section
+
+   - Email capture
+
+   - Interest form
+
+   - Role selection (Client/Freelancer/Investor)
+
+   - City selection
+
+   - Skill category
+
+8) FAQ
+
+   - Is money safe?
+
+   - How is trust built?
+
+   - How are disputes handled?
+
+   - What prevents fake reviews?
+
+   - Is it legally valid?
+
+9) Footer
+
+   - Trust statement
+
+   - Privacy policy
+
+   - Terms
+
+   - Contact
+
+   - Early access link
+
+Features:
+
+- Lead capture forms
+
+- Waitlist system
+
+- Analytics ready
+
+- SEO optimized
+
+- Mobile responsive
+
+- Fast loading
+
+- Web3 visual elements (subtle, not crypto-heavy)
+
+- Map visual for nearby discovery
+
+- Trust score visualization
+
+- Security badges
+
+- Professional UI animations
+
+Tone:
+
+Confident
+
+Trustworthy
+
+Clear
+
+Simple
+
+Professional
+
+Visionary
+
+Not hype-driven
+
+Not crypto-jargon
+
+Not technical-heavy language
+
+Tech Preference:
+
+- Next.js or React
+
+- Tailwind CSS
+
+- Component-based structure
+
+- Modular design
+
+- Clean code
+
+- SEO-first structure
+
+Build it as a real startup validation website, not a landing page mockup.
+
+
+
+Don't use emojis use icons svgs
