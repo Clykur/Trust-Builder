@@ -4,37 +4,37 @@ import { UserCheck, FileKey, Coins, Briefcase, BrainCircuit, Users, Database } f
 const steps = [
   {
     icon: UserCheck,
-    title: "1. Client creates contract",
+    title: "Step 1: Client creates contract",
     description: "Define scope, milestones, and payment terms using our jurisdiction-compliant legal templates."
   },
   {
     icon: FileKey,
-    title: "2. Funds locked in escrow",
+    title: "Step 2: Funds locked in escrow",
     description: "Capital is secured in our neutral zero-loss escrow system before work begins."
   },
   {
     icon: Briefcase,
-    title: "3. Freelancer delivers work",
+    title: "Step 3: Freelancer delivers work",
     description: "The freelancer works on the defined milestones and submits deliverables through the platform."
   },
   {
     icon: BrainCircuit,
-    title: "4. AI verifies delivery",
+    title: "Step 4: AI verifies delivery",
     description: "Our AI engine analyzes the submission against the contract scope to ensure all requirements are met."
   },
   {
     icon: Users,
-    title: "5. Mutual approval",
+    title: "Step 5: Mutual approval",
     description: "Both parties review the verified deliverables for final confirmation."
   },
   {
     icon: Coins,
-    title: "6. Auto payment release",
+    title: "Step 6: Auto payment release",
     description: "Upon approval, the smart contract triggers the immediate release of funds from escrow."
   },
   {
     icon: Database,
-    title: "7. Reputation token minted",
+    title: "Step 7: Reputation token minted",
     description: "A cryptographic proof of the successful collaboration is added to the blockchain reputation ledger."
   }
 ];
@@ -52,7 +52,7 @@ export function HowItWorks() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold font-display mb-4 text-foreground">
-            Frictionless Validation
+            How It Works
           </h2>
           <p className="text-lg text-muted-foreground">
             A systematic approach to eliminating counterparty risk.

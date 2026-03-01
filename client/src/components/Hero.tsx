@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export function Hero() {
   const scrollToWaitlist = () => {
-    document.getElementById("waitlist-section")?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById("validation-section")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (

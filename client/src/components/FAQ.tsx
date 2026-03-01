@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     q: "How is trust built?",
-    a: "Trust is built through a combination of identity verification (KYC), historical performance data stored on-chain, and real-world proximity validation. We call this the Valida Trust Score."
+    a: "Trust is built through a combination of identity verification (KYC), historical performance data stored on-chain, and real-world proximity validation. We call this the FreeTrust Trust Score."
   },
   {
     q: "How are disputes handled?",
@@ -24,16 +24,16 @@ const faqs = [
   },
   {
     q: "Is it legally valid?",
-    a: "Yes. Every agreement on Valida is a legally binding contract formatted to be enforceable in most major jurisdictions, combining digital efficiency with traditional legal safety."
+    a: "Yes. Every agreement on FreeTrust is a legally binding contract formatted to be enforceable in most major jurisdictions, combining digital efficiency with traditional legal safety."
   }
 ];
 
 export function FAQ() {
   return (
-    <section className="py-24">
+    <section id="faq-section" className="py-24">
       <div className="container mx-auto px-4 max-w-3xl">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">Common Questions</h2>
+          <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">FAQ</h2>
           <p className="text-lg text-muted-foreground">Everything you need to know about the trust infrastructure.</p>
         </div>
         <Accordion type="single" collapsible className="w-full">

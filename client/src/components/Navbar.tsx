@@ -19,13 +19,14 @@ export function Navbar() {
           <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
             <ShieldCheck size={20} strokeWidth={2.5} />
           </div>
-          <span className="font-display font-bold text-lg tracking-tight">Valida</span>
+          <span className="font-display font-bold text-lg tracking-tight">FreeTrust</span>
         </div>
         
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-muted-foreground">
-          <button onClick={() => document.getElementById("features-section")?.scrollIntoView({ behavior: "smooth" })} className="hover:text-foreground transition-colors">Platform</button>
+          <button onClick={() => document.getElementById("problem-section")?.scrollIntoView({ behavior: "smooth" })} className="hover:text-foreground transition-colors">Problem</button>
+          <button onClick={() => document.getElementById("solution-section")?.scrollIntoView({ behavior: "smooth" })} className="hover:text-foreground transition-colors">Solution</button>
           <button onClick={() => document.getElementById("how-it-works-section")?.scrollIntoView({ behavior: "smooth" })} className="hover:text-foreground transition-colors">How it Works</button>
-          <button onClick={() => document.getElementById("security-section")?.scrollIntoView({ behavior: "smooth" })} className="hover:text-foreground transition-colors">Security</button>
+          <button onClick={() => document.getElementById("validation-section")?.scrollIntoView({ behavior: "smooth" })} className="hover:text-foreground transition-colors">Validation</button>
         </nav>
 
         <div className="flex items-center gap-4">

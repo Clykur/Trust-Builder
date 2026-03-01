@@ -1,7 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { ProblemSection } from "@/components/ProblemSection";
-import { Features } from "@/components/Features";
 import { SolutionSection } from "@/components/SolutionSection";
 import { HowItWorks } from "@/components/HowItWorks";
 import { TrustLayers } from "@/components/TrustLayers";
@@ -22,7 +21,6 @@ export default function Home() {
         <Hero />
         <ProblemSection />
         <SolutionSection />
-        <Features />
         <HowItWorks />
         <TrustLayers />
         <UseCases />

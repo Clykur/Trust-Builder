@@ -45,7 +45,7 @@ export function WaitlistForm() {
   };
 
   return (
-    <section id="waitlist-section" className="py-24 relative z-10">
+    <section id="validation-section" className="py-24 relative z-10">
       <div className="container mx-auto px-4 flex justify-center">
         <div className="w-full max-w-xl">
           <motion.div 
@@ -68,10 +68,10 @@ export function WaitlistForm() {
                   >
                     <div className="text-center mb-8">
                       <h2 className="text-3xl font-bold font-display text-foreground mb-3">
-                        Secure Your Position
+                        Validation Section
                       </h2>
                       <p className="text-muted-foreground">
-                        Join the waitlist for exclusive early access to the Valida network.
+                        Join the waitlist for exclusive early access to the FreeTrust network.
                       </p>
                     </div>
 
@@ -163,7 +163,7 @@ export function WaitlistForm() {
                     </div>
                     <h3 className="text-2xl font-bold font-display text-foreground">Position Secured</h3>
                     <p className="text-muted-foreground max-w-sm">
-                      Thank you for joining the Valida waitlist. We will notify you when priority access opens for your role.
+                      Thank you for joining the FreeTrust waitlist. We will notify you when priority access opens for your role.
                     </p>
                     <Button 
                       variant="outline" 

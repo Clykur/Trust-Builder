@@ -1,3 +1,4 @@
+// shared/routes.ts
 import { z } from 'zod';
 import { insertWaitlistSchema, waitlist } from './schema';
 

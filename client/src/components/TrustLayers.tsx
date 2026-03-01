@@ -31,10 +31,10 @@ const layers = [
 
 export function TrustLayers() {
   return (
-    <section className="py-24">
+    <section id="trust-layers-section" className="py-24">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">Multi-Dimensional Trust</h2>
+          <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">Trust Layers</h2>
           <p className="text-lg text-muted-foreground">Five layers of security working in harmony to protect your work and capital.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4">

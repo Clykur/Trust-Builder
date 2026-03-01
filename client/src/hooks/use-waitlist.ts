@@ -39,7 +39,7 @@ export function useCreateWaitlist() {
     onSuccess: () => {
       toast({
         title: "Welcome aboard!",
-        description: "You've successfully joined our priority waitlist.",
+        description: "You've successfully joined the FreeTrust priority waitlist.",
         variant: "default",
       });
     },
