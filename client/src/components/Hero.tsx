@@ -58,16 +58,24 @@ export function Hero() {
             onClick={scrollToWaitlist}
             className="w-full sm:w-auto text-lg h-14 px-8 rounded-xl shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/40 hover:-translate-y-0.5 transition-all duration-300 group"
           >
-            Join the Waitlist
+            Join as Freelancer
             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Button>
           <Button 
             size="lg"
             variant="outline"
-            onClick={() => document.getElementById("features-section")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={scrollToWaitlist}
             className="w-full sm:w-auto text-lg h-14 px-8 rounded-xl border-border/50 bg-background/50 backdrop-blur-sm hover:bg-muted transition-all duration-300"
           >
-            Explore Platform
+            Join as Client
+          </Button>
+          <Button 
+            size="lg"
+            variant="ghost"
+            onClick={scrollToWaitlist}
+            className="w-full sm:w-auto text-lg h-14 px-8 rounded-xl hover:bg-primary/5 transition-all duration-300"
+          >
+            Request Early Access
           </Button>
         </motion.div>
 

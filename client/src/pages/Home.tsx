@@ -1,8 +1,13 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
+import { ProblemSection } from "@/components/ProblemSection";
 import { Features } from "@/components/Features";
+import { SolutionSection } from "@/components/SolutionSection";
 import { HowItWorks } from "@/components/HowItWorks";
+import { TrustLayers } from "@/components/TrustLayers";
+import { UseCases } from "@/components/UseCases";
 import { WaitlistForm } from "@/components/WaitlistForm";
+import { FAQ } from "@/components/FAQ";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
@@ -15,8 +20,13 @@ export default function Home() {
       
       <div className="relative z-10">
         <Hero />
+        <ProblemSection />
+        <SolutionSection />
         <Features />
         <HowItWorks />
+        <TrustLayers />
+        <UseCases />
+        <FAQ />
         <WaitlistForm />
       </div>
       

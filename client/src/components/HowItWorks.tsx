@@ -1,21 +1,41 @@
 import { motion } from "framer-motion";
-import { UserCheck, FileKey, Coins, ArrowDown } from "lucide-react";
+import { UserCheck, FileKey, Coins, Briefcase, BrainCircuit, Users, Database } from "lucide-react";
 
 const steps = [
   {
     icon: UserCheck,
-    title: "1. Identity & Skill Verification",
-    description: "Complete our institutional-grade KYC/KYB. We cryptographically verify credentials, past work, and financial standing."
+    title: "1. Client creates contract",
+    description: "Define scope, milestones, and payment terms using our jurisdiction-compliant legal templates."
   },
   {
     icon: FileKey,
-    title: "2. Smart Contract Generation",
-    description: "Define scope, milestones, and payment terms. We automatically generate a binding legal contract backed by code."
+    title: "2. Funds locked in escrow",
+    description: "Capital is secured in our neutral zero-loss escrow system before work begins."
+  },
+  {
+    icon: Briefcase,
+    title: "3. Freelancer delivers work",
+    description: "The freelancer works on the defined milestones and submits deliverables through the platform."
+  },
+  {
+    icon: BrainCircuit,
+    title: "4. AI verifies delivery",
+    description: "Our AI engine analyzes the submission against the contract scope to ensure all requirements are met."
+  },
+  {
+    icon: Users,
+    title: "5. Mutual approval",
+    description: "Both parties review the verified deliverables for final confirmation."
   },
   {
     icon: Coins,
-    title: "3. Escrow & Execution",
-    description: "Funds are locked securely in neutral escrow. Payouts trigger automatically upon validated milestone completion."
+    title: "6. Auto payment release",
+    description: "Upon approval, the smart contract triggers the immediate release of funds from escrow."
+  },
+  {
+    icon: Database,
+    title: "7. Reputation token minted",
+    description: "A cryptographic proof of the successful collaboration is added to the blockchain reputation ledger."
   }
 ];
 

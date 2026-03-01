@@ -1,26 +1,31 @@
 import { motion } from "framer-motion";
-import { Shield, BrainCircuit, Scale, Network } from "lucide-react";
+import { Shield, BrainCircuit, Scale, Network, MapPin } from "lucide-react";
 
 const features = [
   {
-    icon: Shield,
-    title: "Cryptographic Security",
-    description: "Every contract, milestone, and deliverable is cryptographically hashed and stored immutably. Absolute proof of work and agreement."
+    icon: Scale,
+    title: "Legal-backed agreements",
+    description: "Jurisdiction-compliant contracts that turn digital handshakes into enforceable legal safety."
   },
   {
-    icon: Scale,
-    title: "Legally Binding",
-    description: "Digital agreements translated instantly into jurisdiction-compliant legal contracts. Protection without the prohibitive legal fees."
+    icon: Shield,
+    title: "Zero-loss escrow system",
+    description: "Capital is held in neutral custody, ensuring no one loses money to scams or non-payment."
   },
   {
     icon: BrainCircuit,
-    title: "AI-Powered Matching",
-    description: "Our proprietary intelligence engine analyzes verified historical data to match the perfect talent with exact project requirements."
+    title: "AI verification engine",
+    description: "Automated analysis of deliverables to ensure they match agreed-upon contract requirements."
   },
   {
     icon: Network,
-    title: "Network Reputation",
-    description: "Build a portable, verified professional graph. Your successes are validated by cryptographic proof, not just subjective reviews."
+    title: "Blockchain reputation ledger",
+    description: "An immutable, cryptographic record of your professional successes and verified work history."
+  },
+  {
+    icon: MapPin,
+    title: "Nearby freelancer trust model",
+    description: "Leveraging local proximity and physical verification to add an extra layer of real-world trust."
   }
 ];
 
@@ -49,7 +54,7 @@ export function Features() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <motion.div
               key={index}
