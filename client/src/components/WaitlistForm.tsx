@@ -23,7 +23,7 @@ type WaitlistFormValues = z.infer<typeof api.waitlist.create.input>;
 const trust = [
   { icon: ShieldCheck, text: "Your data is encrypted and never shared" },
   { icon: Lock, text: "No credit card required" },
-  { icon: Users, text: "Join 1,200+ professionals already waiting" },
+  { icon: Users, text: "Open to freelancers, clients, and investors" },
 ];
 
 export function WaitlistForm() {
@@ -91,8 +91,7 @@ export function WaitlistForm() {
               </div>
             ))}
             <div className="pt-6 border-t border-border/40">
-              <div className="text-2xl font-bold font-display text-foreground">1,200+</div>
-              <div className="text-sm text-muted-foreground">professionals on the waitlist</div>
+              <div className="text-sm text-muted-foreground">Be among the first professionals to get access when we launch.</div>
             </div>
           </motion.div>
 

@@ -61,7 +61,7 @@ export function TrustLayers() {
             Five Dimensions <br />of Protection
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Every FreeTrust engagement is secured by five independently operating trust layers — simultaneously.
+            Every FreeTrust engagement is secured by five independently operating trust layers, simultaneously.
           </p>
         </motion.div>
 

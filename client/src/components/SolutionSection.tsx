@@ -12,7 +12,7 @@ const solutions = [
   {
     icon: Shield,
     title: "Zero-loss escrow",
-    description: "Capital held in neutral custody — released only upon verified milestone completion, never before.",
+    description: "Capital held in neutral custody and released only upon verified milestone completion, never before.",
     accent: "from-emerald-500/10 to-teal-500/5",
     iconColor: "text-emerald-600",
   },
@@ -26,7 +26,7 @@ const solutions = [
   {
     icon: Network,
     title: "Blockchain reputation ledger",
-    description: "Immutable, cryptographic record of your professional history — impossible to fake or delete.",
+    description: "Immutable, cryptographic record of your professional history. Impossible to fake or delete.",
     accent: "from-orange-500/10 to-amber-500/5",
     iconColor: "text-orange-600",
   },

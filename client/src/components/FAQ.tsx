@@ -9,7 +9,7 @@ import {
 const faqs = [
   {
     q: "Is my money actually safe with FreeTrust?",
-    a: "Yes. Funds are held in a neutral, multi-signature escrow vault — neither party can access the funds unilaterally. They are only released when milestones are AI-verified and approved by both parties, or resolved through our legal arbitration protocol."
+    a: "Yes. Funds are held in a neutral, multi-signature escrow vault. Neither party can access the funds unilaterally. They are only released when milestones are AI-verified and approved by both parties, or resolved through our legal arbitration protocol."
   },
   {
     q: "How does FreeTrust build a trust score?",
@@ -17,11 +17,11 @@ const faqs = [
   },
   {
     q: "What happens if there's a dispute?",
-    a: "Disputes go through a two-stage process. First, our AI engine re-analyzes the deliverable against the contract scope. If parties remain unaligned, the dispute escalates to legally-binding arbitration — the outcome of which was agreed upon when the contract was signed."
+    a: "Disputes go through a two-stage process. First, our AI engine re-analyzes the deliverable against the contract scope. If parties remain unaligned, the dispute escalates to legally-binding arbitration whose outcome was agreed upon when the contract was signed."
   },
   {
     q: "How are fake reviews prevented?",
-    a: "A review on FreeTrust can only exist if there is a corresponding cryptographic proof of payment on the blockchain. No verified transaction means no review — period. Bot-farming is structurally impossible."
+    a: "A review on FreeTrust can only exist if there is a corresponding cryptographic proof of payment on the blockchain. No verified transaction means no review. Bot-farming is structurally impossible."
   },
   {
     q: "Are contracts legally enforceable?",

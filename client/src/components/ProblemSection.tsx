@@ -10,7 +10,7 @@ const problems = [
   {
     icon: ShieldAlert,
     title: "Clients fall victim to scams",
-    description: "Paying upfront only to receive substandard work — or nothing at all."
+    description: "Paying upfront only to receive substandard work, or nothing at all."
   },
   {
     icon: Ghost,

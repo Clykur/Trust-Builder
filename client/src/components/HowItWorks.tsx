@@ -36,13 +36,13 @@ const steps = [
     icon: Coins,
     label: "Payment",
     title: "Instant Payment Release",
-    description: "The moment approval is confirmed, the smart contract executes and funds are transferred directly — no delays, no intermediaries.",
+    description: "The moment approval is confirmed, the smart contract executes and funds are transferred directly. No delays, no intermediaries.",
   },
   {
     icon: Database,
     label: "Reputation",
     title: "Reputation Token Is Minted",
-    description: "A permanent, cryptographic proof of the collaboration is recorded on the blockchain — building an immutable professional history.",
+    description: "A permanent, cryptographic proof of the collaboration is recorded on the blockchain, building an immutable professional history.",
   },
 ];
 

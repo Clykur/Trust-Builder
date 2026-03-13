@@ -41,7 +41,7 @@ export function Footer() {
               <span className="font-display font-bold text-lg tracking-tight text-foreground">FreeTrust</span>
             </div>
             <p className="text-sm text-muted-foreground max-w-xs leading-relaxed">
-              The first comprehensive trust infrastructure for the professional economy. Legal protection, zero-loss escrow, and AI verification — built for the future of work.
+              The first comprehensive trust infrastructure for the professional economy. Legal protection, zero-loss escrow, and AI verification built for the future of work.
             </p>
             <div className="flex items-center gap-2 pt-2">
               <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
@@ -76,7 +76,7 @@ export function Footer() {
             <span>&copy; {new Date().getFullYear()} FreeTrust Network, Inc. All rights reserved.</span>
           </div>
           <div className="text-xs text-muted-foreground">
-            Cryptographically secured &middot; Legally enforceable &middot; AI-verified
+            Cryptographically secured · Legally enforceable · AI-verified
           </div>
         </div>
       </div>

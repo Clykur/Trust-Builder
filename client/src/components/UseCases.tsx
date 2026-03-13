@@ -8,9 +8,9 @@ const useCases = [
   { icon: Building2, title: "Startups & SMBs", desc: "Scale quickly without the risk of scams, bad hires, or lost deposits." },
   { icon: Briefcase, title: "Agencies", desc: "Manage sub-contractors with automated verification and secure escrow." },
   { icon: Users, title: "Remote Teams", desc: "Collaborate across borders with absolute financial and legal security." },
-  { icon: Tv, title: "Content Creators", desc: "Define scope, deliver, and get paid — with a contract that protects you." },
+  { icon: Tv, title: "Content Creators", desc: "Define scope, deliver, and get paid with a contract that protects you." },
   { icon: MapPin, title: "Local Freelancers", desc: "Build reputation in your city backed by cryptographic proof." },
-  { icon: FileText, title: "Writers & Researchers", desc: "Milestone-based payments tied to verified delivery — every time." },
+  { icon: FileText, title: "Writers & Researchers", desc: "Milestone-based payments tied to verified delivery, every time." },
 ];
 
 export function UseCases() {
@@ -28,7 +28,7 @@ export function UseCases() {
             Built for Every <br />Knowledge Worker
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            FreeTrust adapts to how you work — regardless of your industry or role.
+            FreeTrust adapts to how you work, regardless of your industry or role.
           </p>
         </motion.div>
 
