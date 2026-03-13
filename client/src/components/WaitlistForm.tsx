@@ -78,7 +78,7 @@ export function WaitlistForm() {
                     {/* Email */}
                     <div className="space-y-1.5">
                       <Label htmlFor="email" className="text-foreground/80 text-sm font-medium">
-                        Work Email <span className="text-destructive">*</span>
+                        Email <span className="text-destructive">*</span>
                       </Label>
                       <Input
                         id="email"
@@ -122,7 +122,7 @@ export function WaitlistForm() {
                     <div className="grid grid-cols-2 gap-4">
                       <div className="space-y-1.5">
                         <Label htmlFor="city" className="text-foreground/80 text-sm font-medium">
-                          City <span className="text-muted-foreground font-normal text-xs">(Optional)</span>
+                          City <span className="text-destructive">*</span>
                         </Label>
                         <Input
                           id="city"
@@ -131,10 +131,13 @@ export function WaitlistForm() {
                           className="h-12 rounded-xl bg-background border-border/60 focus-visible:ring-primary/20 focus-visible:border-primary transition-all"
                           {...form.register("city")}
                         />
+                        {form.formState.errors.city && (
+                          <p className="text-sm text-destructive">{form.formState.errors.city.message}</p>
+                        )}
                       </div>
                       <div className="space-y-1.5">
                         <Label htmlFor="category" className="text-foreground/80 text-sm font-medium">
-                          Industry <span className="text-muted-foreground font-normal text-xs">(Optional)</span>
+                          Industry <span className="text-destructive">*</span>
                         </Label>
                         <Input
                           id="category"
@@ -143,6 +146,9 @@ export function WaitlistForm() {
                           className="h-12 rounded-xl bg-background border-border/60 focus-visible:ring-primary/20 focus-visible:border-primary transition-all"
                           {...form.register("category")}
                         />
+                        {form.formState.errors.category && (
+                          <p className="text-sm text-destructive">{form.formState.errors.category.message}</p>
+                        )}
                       </div>
                     </div>
 

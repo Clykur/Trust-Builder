@@ -21,6 +21,8 @@ export const insertWaitlistSchema = createInsertSchema(waitlist).omit({
   role: z.enum(["Client", "Freelancer", "Investor"], {
     required_error: "Please select a role",
   }),
+  city: z.string().min(1, "Please enter your city"),
+  category: z.string().min(1, "Please enter your industry"),
 });
 
 // === EXPLICIT API CONTRACT TYPES ===
