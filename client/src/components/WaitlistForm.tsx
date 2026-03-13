@@ -83,7 +83,7 @@ export function WaitlistForm() {
                       <Input
                         id="email"
                         type="email"
-                        placeholder="alex@company.com"
+                        placeholder="mail@example.com"
                         data-testid="input-email"
                         className="h-12 rounded-xl bg-background border-border/60 focus-visible:ring-primary/20 focus-visible:border-primary transition-all"
                         {...form.register("email")}
