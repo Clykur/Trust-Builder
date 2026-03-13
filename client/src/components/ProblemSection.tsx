@@ -36,7 +36,7 @@ const problems = [
 
 export function ProblemSection() {
   return (
-    <section id="problem-section" className="py-28 relative overflow-hidden">
+    <section id="problem-section" className="py-20 md:py-28 relative overflow-hidden">
       {/* Subtle dark band */}
       <div className="absolute inset-0 bg-foreground/[0.022]" />
 

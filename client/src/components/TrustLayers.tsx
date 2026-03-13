@@ -46,7 +46,7 @@ const layers = [
 
 export function TrustLayers() {
   return (
-    <section id="trust-layers-section" className="py-28 relative overflow-hidden">
+    <section id="trust-layers-section" className="py-20 md:py-28 relative overflow-hidden">
       <div className="absolute inset-0 bg-foreground/[0.022]" />
 
       <div className="container mx-auto px-4 max-w-6xl relative z-10">
@@ -65,7 +65,7 @@ export function TrustLayers() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
           {layers.map((layer, i) => (
             <motion.div
               key={i}

@@ -31,9 +31,9 @@ export function Footer() {
   return (
     <footer className="border-t border-border/50 bg-card/30 py-16">
       <div className="container mx-auto px-4 max-w-6xl">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 md:gap-12 mb-12 md:mb-16">
           {/* Brand */}
-          <div className="col-span-1 md:col-span-2 space-y-4">
+          <div className="col-span-1 sm:col-span-2 space-y-4">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-xl bg-primary flex items-center justify-center text-white shadow-sm">
                 <ShieldCheck size={17} strokeWidth={2.5} />
@@ -70,7 +70,7 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-8 border-t border-border/30 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="pt-6 border-t border-border/30 flex flex-col sm:flex-row justify-between items-center gap-3 text-center sm:text-left">
           <div className="text-xs text-muted-foreground flex items-center gap-2">
             <Shield size={12} className="text-primary" />
             <span>&copy; {new Date().getFullYear()} FreeTrust Network, Inc. All rights reserved.</span>

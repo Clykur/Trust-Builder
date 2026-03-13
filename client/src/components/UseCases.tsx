@@ -15,7 +15,7 @@ const useCases = [
 
 export function UseCases() {
   return (
-    <section id="use-cases-section" className="py-28 bg-background">
+    <section id="use-cases-section" className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-4 max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 16 }}

@@ -44,7 +44,7 @@ export function WaitlistForm() {
   };
 
   return (
-    <section id="validation-section" className="py-28 relative overflow-hidden">
+    <section id="validation-section" className="py-20 md:py-28 relative overflow-hidden">
       <div className="absolute inset-0 bg-foreground/[0.022]" />
 
       <div className="container mx-auto px-4 max-w-6xl relative z-10">
@@ -119,7 +119,7 @@ export function WaitlistForm() {
                     </div>
 
                     {/* City + Industry */}
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div className="space-y-1.5">
                         <Label htmlFor="city" className="text-foreground/80 text-sm font-medium">
                           City <span className="text-destructive">*</span>
