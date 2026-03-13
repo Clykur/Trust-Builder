@@ -5,57 +5,71 @@ const problems = [
   {
     icon: UserX,
     title: "Freelancers fear non-payment",
-    description: "Weeks of work with no guarantee of compensation after delivery."
+    description: "Weeks of skilled work delivered with zero guarantee of compensation."
   },
   {
     icon: ShieldAlert,
-    title: "Clients fear scams",
-    description: "Paying upfront only to receive low-quality work or face disappearance."
+    title: "Clients fall victim to scams",
+    description: "Paying upfront only to receive substandard work — or nothing at all."
   },
   {
     icon: Ghost,
-    title: "Fake reviews",
-    description: "Bot-generated testimonials and manipulated rating systems."
+    title: "Fake reviews everywhere",
+    description: "Bot-generated testimonials and manipulated ratings erode trust at scale."
   },
   {
     icon: AlertCircle,
-    title: "Platform manipulation",
-    description: "Algorithmic bias and high fees that favor the platform, not the users."
+    title: "Platforms exploit both sides",
+    description: "Algorithmic bias, high fees, and opaque systems that serve the platform first."
   },
   {
     icon: Lock,
-    title: "No legal safety",
-    description: "Standard terms of service that offer zero protection in real disputes."
+    title: "Zero legal recourse",
+    description: "Generic terms of service that offer no real protection when disputes arise."
   },
   {
     icon: LayoutPanelLeft,
-    title: "No real trust layer",
-    description: "The internet lacks a native infrastructure for professional validation."
+    title: "No native trust infrastructure",
+    description: "The internet was never built with professional accountability in mind."
   }
 ];
 
 export function ProblemSection() {
   return (
-    <section id="problem-section" className="py-24 bg-muted/30">
-      <div className="container mx-auto px-4 max-w-6xl">
-        <div className="text-center mb-16 max-w-2xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">Problem Section</h2>
-          <p className="text-lg text-muted-foreground">The current freelance economy is built on shaky foundations. We're fixing the fundamental flaws.</p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <section id="problem-section" className="py-28 relative overflow-hidden">
+      {/* Subtle dark band */}
+      <div className="absolute inset-0 bg-foreground/[0.022]" />
+
+      <div className="container mx-auto px-4 max-w-6xl relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16 max-w-2xl mx-auto"
+        >
+          <span className="pill-badge mb-6 inline-flex">The Problem</span>
+          <h2 className="text-3xl md:text-5xl font-bold font-display mb-5 mt-4">
+            The Freelance Economy<br />is Broken by Design
+          </h2>
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            Six structural failures that cost freelancers and clients billions every year.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {problems.map((p, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="p-6 rounded-2xl bg-card border border-border shadow-sm"
+              transition={{ delay: i * 0.08 }}
+              className="group p-7 rounded-2xl bg-card border border-border hover:border-destructive/20 shadow-sm hover:shadow-md transition-all duration-300"
             >
-              <div className="w-12 h-12 rounded-xl bg-destructive/5 text-destructive flex items-center justify-center mb-4">
-                <p.icon size={24} />
+              <div className="w-11 h-11 rounded-xl bg-destructive/6 text-destructive/70 flex items-center justify-center mb-5 group-hover:bg-destructive/10 group-hover:text-destructive transition-all duration-200">
+                <p.icon size={22} />
               </div>
-              <h3 className="text-lg font-bold mb-2">{p.title}</h3>
+              <h3 className="text-base font-bold mb-2 text-foreground">{p.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">{p.description}</p>
             </motion.div>
           ))}
