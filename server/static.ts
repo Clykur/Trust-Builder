@@ -2,6 +2,14 @@ import express, { type Express } from "express";
 import fs from "fs";
 import path from "path";
 
+const INDEX_HTML = "index.html";
+
+function htmlHeaders(res: express.Response) {
+  res.setHeader("Content-Type", "text/html; charset=utf-8");
+  res.setHeader("Content-Disposition", "inline");
+  res.setHeader("X-Content-Type-Options", "nosniff");
+}
+
 export function serveStatic(app: Express) {
   const distPath = path.resolve(__dirname, "public");
   if (!fs.existsSync(distPath)) {
@@ -10,20 +18,25 @@ export function serveStatic(app: Express) {
     );
   }
 
-  app.use(express.static(distPath, {
-    // Ensure HTML is displayed, not downloaded
-    setHeaders: (res, filePath) => {
-      if (filePath.endsWith(".html")) {
-        res.setHeader("Content-Type", "text/html; charset=utf-8");
-        res.setHeader("Content-Disposition", "inline");
-      }
-    },
-  }));
+  const indexPath = path.join(distPath, INDEX_HTML);
+  const indexHtml = fs.readFileSync(indexPath, "utf-8");
 
-  // SPA fallback: serve index.html for any non-file route (Express "*" catch-all)
+  // Serve JS, CSS, images, etc. from dist/public (no index file – we serve HTML ourselves)
+  app.use(
+    express.static(distPath, {
+      index: false,
+      setHeaders: (res, filePath) => {
+        if (String(filePath).endsWith(".html")) {
+          htmlHeaders(res);
+        }
+      },
+    })
+  );
+
+  // Serve index.html for / and every other non-file route with strict HTML headers
+  // so the browser always renders the page instead of downloading
   app.get("*", (_req, res) => {
-    res.setHeader("Content-Type", "text/html; charset=utf-8");
-    res.setHeader("Content-Disposition", "inline");
-    res.sendFile(path.resolve(distPath, "index.html"));
+    htmlHeaders(res);
+    res.send(indexHtml);
   });
 }
