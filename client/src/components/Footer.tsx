@@ -1,30 +1,23 @@
 import { ShieldCheck, Shield } from "lucide-react";
+import { Link } from "wouter";
 
-const sections = [
-  {
-    title: "Platform",
-    links: [
-      { label: "Problem", id: "problem-section" },
-      { label: "Solution", id: "solution-section" },
-      { label: "How It Works", id: "how-it-works-section" },
-      { label: "Trust Layers", id: "trust-layers-section" },
-      { label: "Use Cases", id: "use-cases-section" },
-      { label: "FAQ", id: "faq-section" },
-    ],
-  },
-  {
-    title: "Company",
-    links: [
-      { label: "Privacy Policy", id: null },
-      { label: "Terms of Service", id: null },
-      { label: "Security Protocol", id: null },
-    ],
-  },
+const platformLinks = [
+  { label: "Problem", id: "problem-section" },
+  { label: "Solution", id: "solution-section" },
+  { label: "How It Works", id: "how-it-works-section" },
+  { label: "Trust Layers", id: "trust-layers-section" },
+  { label: "Use Cases", id: "use-cases-section" },
+  { label: "FAQ", id: "faq-section" },
+];
+
+const companyLinks = [
+  { label: "Privacy Policy", href: "/privacy" },
+  { label: "Terms of Service", href: "/terms" },
+  { label: "Security Protocol", href: "/security" },
 ];
 
 export function Footer() {
-  const scrollTo = (id: string | null) => {
-    if (!id) return;
+  const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -49,24 +42,38 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Links */}
-          {sections.map((sec) => (
-            <div key={sec.title} className="space-y-4">
-              <h4 className="font-bold text-foreground text-xs uppercase tracking-[0.12em]">{sec.title}</h4>
-              <ul className="space-y-2.5">
-                {sec.links.map((link) => (
-                  <li key={link.label}>
-                    <button
-                      onClick={() => scrollTo(link.id)}
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors text-left"
-                    >
+          {/* Platform links */}
+          <div className="space-y-4">
+            <h4 className="font-bold text-foreground text-xs uppercase tracking-[0.12em]">Platform</h4>
+            <ul className="space-y-2.5">
+              {platformLinks.map((link) => (
+                <li key={link.label}>
+                  <button
+                    onClick={() => scrollTo(link.id)}
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors text-left"
+                  >
+                    {link.label}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company links */}
+          <div className="space-y-4">
+            <h4 className="font-bold text-foreground text-xs uppercase tracking-[0.12em]">Company</h4>
+            <ul className="space-y-2.5">
+              {companyLinks.map((link) => (
+                <li key={link.label}>
+                  <Link href={link.href}>
+                    <a className="text-sm text-muted-foreground hover:text-primary transition-colors">
                       {link.label}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+                    </a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         {/* Bottom bar */}
