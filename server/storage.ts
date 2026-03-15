@@ -1,5 +1,9 @@
 import { db } from "./db";
-import { waitlist, type InsertWaitlist, type WaitlistEntry } from "@shared/schema";
+import {
+  waitlist,
+  type InsertWaitlist,
+  type WaitlistEntry,
+} from "@shared/schema";
 import { eq } from "drizzle-orm";
 import { supabase } from "./supabase";
 
@@ -9,7 +13,14 @@ export interface IStorage {
 }
 
 /** Map Supabase row (snake_case) to WaitlistEntry (camelCase) */
-function fromSupabaseRow(row: { id: number; email: string; role: string; city: string | null; category: string | null; created_at: string }): WaitlistEntry {
+function fromSupabaseRow(row: {
+  id: number;
+  email: string;
+  role: string;
+  city: string | null;
+  category: string | null;
+  created_at: string;
+}): WaitlistEntry {
   return {
     id: row.id,
     email: row.email,
@@ -37,7 +48,9 @@ export class SupabaseStorage implements IStorage {
     return fromSupabaseRow(data);
   }
 
-  async getWaitlistEntryByEmail(email: string): Promise<WaitlistEntry | undefined> {
+  async getWaitlistEntryByEmail(
+    email: string,
+  ): Promise<WaitlistEntry | undefined> {
     const { data, error } = await supabase!
       .from("waitlist")
       .select()
@@ -52,14 +65,13 @@ export class SupabaseStorage implements IStorage {
 export class DatabaseStorage implements IStorage {
   async createWaitlistEntry(entry: InsertWaitlist): Promise<WaitlistEntry> {
     if (!db) throw new Error("Database not configured");
-    const [created] = await db
-      .insert(waitlist)
-      .values(entry)
-      .returning();
+    const [created] = await db.insert(waitlist).values(entry).returning();
     return created;
   }
 
-  async getWaitlistEntryByEmail(email: string): Promise<WaitlistEntry | undefined> {
+  async getWaitlistEntryByEmail(
+    email: string,
+  ): Promise<WaitlistEntry | undefined> {
     if (!db) throw new Error("Database not configured");
     const [entry] = await db
       .select()

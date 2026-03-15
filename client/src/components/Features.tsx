@@ -5,36 +5,44 @@ const features = [
   {
     icon: Scale,
     title: "Legal-backed agreements",
-    description: "Jurisdiction-compliant contracts that turn digital handshakes into enforceable legal safety."
+    description:
+      "Jurisdiction-compliant contracts that turn digital handshakes into enforceable legal safety.",
   },
   {
     icon: Shield,
     title: "Zero-loss escrow system",
-    description: "Capital is held in neutral custody, ensuring no one loses money to scams or non-payment."
+    description:
+      "Capital is held in neutral custody, ensuring no one loses money to scams or non-payment.",
   },
   {
     icon: BrainCircuit,
     title: "AI verification engine",
-    description: "Automated analysis of deliverables to ensure they match agreed-upon contract requirements."
+    description:
+      "Automated analysis of deliverables to ensure they match agreed-upon contract requirements.",
   },
   {
     icon: Network,
     title: "Blockchain reputation ledger",
-    description: "An immutable, cryptographic record of your professional successes and verified work history."
+    description:
+      "An immutable, cryptographic record of your professional successes and verified work history.",
   },
   {
     icon: MapPin,
     title: "Nearby freelancer trust model",
-    description: "Leveraging local proximity and physical verification to add an extra layer of real-world trust."
-  }
+    description:
+      "Leveraging local proximity and physical verification to add an extra layer of real-world trust.",
+  },
 ];
 
 export function Features() {
   return (
-    <section id="features-section" className="py-24 bg-background relative z-10">
+    <section
+      id="features-section"
+      className="py-24 bg-background relative z-10"
+    >
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="text-center mb-16 max-w-2xl mx-auto">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -42,15 +50,15 @@ export function Features() {
           >
             The New Standard of Trust
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
             className="text-lg text-muted-foreground"
           >
-            We're building the infrastructure for a trustless professional economy. 
-            Focus on creating value, we handle the security.
+            We're building the infrastructure for a trustless professional
+            economy. Focus on creating value, we handle the security.
           </motion.p>
         </div>
 

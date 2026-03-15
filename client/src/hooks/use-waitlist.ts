@@ -8,7 +8,7 @@ export function useCreateWaitlist() {
   return useMutation({
     mutationFn: async (data: WaitlistInput) => {
       const validated = api.waitlist.create.input.parse(data);
-      
+
       const res = await fetch(api.waitlist.create.path, {
         method: api.waitlist.create.method,
         headers: {
@@ -22,10 +22,12 @@ export function useCreateWaitlist() {
         try {
           const errorData = await res.json();
           if (res.status === 400) {
-            const parsedError = api.waitlist.create.responses[400].parse(errorData);
+            const parsedError =
+              api.waitlist.create.responses[400].parse(errorData);
             errorMessage = parsedError.message;
           } else if (res.status === 409) {
-            const parsedError = api.waitlist.create.responses[409].parse(errorData);
+            const parsedError =
+              api.waitlist.create.responses[409].parse(errorData);
             errorMessage = parsedError.message;
           }
         } catch (e) {
@@ -39,7 +41,8 @@ export function useCreateWaitlist() {
     onSuccess: () => {
       toast({
         title: "Welcome aboard!",
-        description: "You've successfully joined the FreeTrust priority waitlist.",
+        description:
+          "You've successfully joined the FreeTrust priority waitlist.",
         variant: "default",
       });
     },
@@ -49,6 +52,6 @@ export function useCreateWaitlist() {
         description: error.message,
         variant: "destructive",
       });
-    }
+    },
   });
 }

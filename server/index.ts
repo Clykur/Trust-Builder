@@ -10,7 +10,10 @@ declare module "http" {
   }
 }
 
-let appCache: { app: express.Express; httpServer: ReturnType<typeof createServer> } | null = null;
+let appCache: {
+  app: express.Express;
+  httpServer: ReturnType<typeof createServer>;
+} | null = null;
 
 export async function getApp() {
   if (appCache) return appCache;

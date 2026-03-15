@@ -28,7 +28,7 @@ const sections = [
   },
   {
     title: "7. Your Rights as a Data Principal",
-    content: `Under the Digital Personal Data Protection Act, 2023, you have the following rights:\n\n• Right to Access: Request a summary of the personal data we hold about you and the purposes for which it has been processed.\n• Right to Correction: Request correction of inaccurate or incomplete personal data.\n• Right to Erasure: Request erasure of personal data that is no longer necessary for the purpose for which it was collected, subject to legal retention requirements.\n• Right to Grievance Redressal: Have your grievances addressed by our Grievance Officer within the prescribed timelines.\n• Right to Nominate: Nominate another individual to exercise your rights in the event of your death or incapacity.\n• Right to Withdraw Consent: Withdraw previously given consent at any time, with the consequences of such withdrawal communicated to you.\n\nTo exercise any of these rights, contact our Grievance Officer at privacy@freetrust.network. We will respond within 72 hours of receipt. If your grievance is not resolved, you may approach the Data Protection Board of India established under the DPDP Act, 2023.`,
+    content: `Under the Digital Personal Data Protection Act, 2023, you have the following rights:\n\n• Right to Access: Request a summary of the personal data we hold about you and the purposes for which it has been processed.\n• Right to Correction: Request correction of inaccurate or incomplete personal data.\n• Right to Erasure: Request erasure of personal data that is no longer necessary for the purpose for which it was collected, subject to legal retention requirements.\n• Right to Grievance Redressal: Have your grievances addressed by our Grievance Officer within the prescribed timelines.\n• Right to Nominate: Nominate another individual to exercise your rights in the event of your death or incapacity.\n• Right to Withdraw Consent: Withdraw previously given consent at any time, with the consequences of such withdrawal communicated to you.\n\nTo exercise any of these rights, contact our Grievance Officer at info@clykur.com. We will respond within 72 hours of receipt. If your grievance is not resolved, you may approach the Data Protection Board of India established under the DPDP Act, 2023.`,
   },
   {
     title: "8. Sensitive Personal Data",
@@ -56,7 +56,7 @@ const sections = [
   },
   {
     title: "14. Grievance Officer",
-    content: `In accordance with the Information Technology Act, 2000 and the Digital Personal Data Protection Act, 2023, we have appointed a Grievance Officer to address your concerns:\n\nGreivance Officer\nFreeTrust Network Private Limited\nBengaluru, Karnataka, India\nprivacy@freetrust.network\n\nYou may also approach the Data Protection Board of India for unresolved grievances once the Board is constituted and operational under the DPDP Act, 2023.`,
+    content: `In accordance with the Information Technology Act, 2000 and the Digital Personal Data Protection Act, 2023, we have appointed a Grievance Officer to address your concerns:\n\nGrievance Officer\nclykur\nBengaluru, Karnataka, India\ninfo@clykur.com\n\nYou may also approach the Data Protection Board of India for unresolved grievances once the Board is constituted and operational under the DPDP Act, 2023.`,
   },
 ];
 
@@ -69,9 +69,14 @@ export default function PrivacyPolicy() {
             <div className="w-8 h-8 rounded-xl bg-primary flex items-center justify-center text-white shadow-sm">
               <ShieldCheck size={17} strokeWidth={2.5} />
             </div>
-            <span className="font-display font-bold text-lg tracking-tight">FreeTrust</span>
+            <span className="font-display font-bold text-lg tracking-tight">
+              FreeTrust
+            </span>
           </Link>
-          <Link href="/" className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors">
+          <Link
+            href="/"
+            className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
+          >
             <ArrowLeft size={15} />
             Back to home
           </Link>
@@ -81,17 +86,28 @@ export default function PrivacyPolicy() {
       <main className="container mx-auto px-4 max-w-4xl py-14 md:py-20">
         <div className="mb-12">
           <span className="pill-badge mb-5 inline-flex">Legal</span>
-          <h1 className="text-3xl md:text-5xl font-bold font-display mt-4 mb-4">Privacy Policy</h1>
-          <p className="text-muted-foreground">Last updated: March 15, 2026 · Governed by the laws of India</p>
+          <h1 className="text-3xl md:text-5xl font-bold font-display mt-4 mb-4">
+            Privacy Policy
+          </h1>
+          <p className="text-muted-foreground">
+            Last updated: March 15, 2026 · Governed by the laws of India
+          </p>
         </div>
 
         <div className="space-y-10">
           {sections.map((sec, i) => (
-            <div key={i} className="border-b border-border/40 pb-10 last:border-0">
-              <h2 className="text-xl font-bold font-display text-foreground mb-4">{sec.title}</h2>
+            <div
+              key={i}
+              className="border-b border-border/40 pb-10 last:border-0"
+            >
+              <h2 className="text-xl font-bold font-display text-foreground mb-4">
+                {sec.title}
+              </h2>
               <div className="text-muted-foreground leading-relaxed text-sm space-y-3">
                 {sec.content.split("\n\n").map((para, j) => (
-                  <p key={j} className="whitespace-pre-line">{para}</p>
+                  <p key={j} className="whitespace-pre-line">
+                    {para}
+                  </p>
                 ))}
               </div>
             </div>
@@ -101,10 +117,22 @@ export default function PrivacyPolicy() {
 
       <footer className="border-t border-border/40 py-8 mt-8">
         <div className="container mx-auto px-4 max-w-4xl flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-muted-foreground">
-          <span>&copy; {new Date().getFullYear()} FreeTrust Network Private Limited. All rights reserved.</span>
+          <span>
+            &copy; {new Date().getFullYear()} clykur. All rights reserved.
+          </span>
           <div className="flex gap-5">
-            <Link href="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
-            <Link href="/security" className="hover:text-primary transition-colors">Security Protocol</Link>
+            <Link
+              href="/terms"
+              className="hover:text-primary transition-colors"
+            >
+              Terms of Service
+            </Link>
+            <Link
+              href="/security"
+              className="hover:text-primary transition-colors"
+            >
+              Security Protocol
+            </Link>
           </div>
         </div>
       </footer>

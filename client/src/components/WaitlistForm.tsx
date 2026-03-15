@@ -44,7 +44,10 @@ export function WaitlistForm() {
   };
 
   return (
-    <section id="validation-section" className="py-20 md:py-28 relative overflow-hidden">
+    <section
+      id="validation-section"
+      className="py-20 md:py-28 relative overflow-hidden"
+    >
       <div className="absolute inset-0 bg-foreground/[0.022]" />
 
       <div className="container mx-auto px-4 max-w-6xl relative z-10">
@@ -56,10 +59,13 @@ export function WaitlistForm() {
         >
           <span className="pill-badge mb-5 inline-flex">Priority Access</span>
           <h2 className="text-3xl md:text-5xl font-bold font-display mb-4 mt-4">
-            Secure Your Position<br />in the Network
+            Secure Your Position
+            <br />
+            in the Network
           </h2>
           <p className="text-base text-muted-foreground max-w-md mx-auto leading-relaxed">
-            We're opening FreeTrust to a limited group of early members. Join now to lock in founding status before public launch.
+            We're opening FreeTrust to a limited group of early members. Join
+            now to lock in founding status before public launch.
           </p>
         </motion.div>
 
@@ -74,10 +80,16 @@ export function WaitlistForm() {
                 exit={{ opacity: 0 }}
               >
                 <div className="rounded-3xl bg-card border border-border shadow-xl shadow-foreground/5 p-8 md:p-10">
-                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
+                  <form
+                    onSubmit={form.handleSubmit(onSubmit)}
+                    className="space-y-5"
+                  >
                     {/* Email */}
                     <div className="space-y-1.5">
-                      <Label htmlFor="email" className="text-foreground/80 text-sm font-medium">
+                      <Label
+                        htmlFor="email"
+                        className="text-foreground/80 text-sm font-medium"
+                      >
                         Email <span className="text-destructive">*</span>
                       </Label>
                       <Input
@@ -89,17 +101,24 @@ export function WaitlistForm() {
                         {...form.register("email")}
                       />
                       {form.formState.errors.email && (
-                        <p className="text-sm text-destructive">{form.formState.errors.email.message}</p>
+                        <p className="text-sm text-destructive">
+                          {form.formState.errors.email.message}
+                        </p>
                       )}
                     </div>
 
                     {/* Role */}
                     <div className="space-y-1.5">
-                      <Label htmlFor="role" className="text-foreground/80 text-sm font-medium">
+                      <Label
+                        htmlFor="role"
+                        className="text-foreground/80 text-sm font-medium"
+                      >
                         Primary Role <span className="text-destructive">*</span>
                       </Label>
                       <Select
-                        onValueChange={(value: "Client" | "Freelancer" | "Investor") => form.setValue("role", value)}
+                        onValueChange={(
+                          value: "Client" | "Freelancer" | "Investor",
+                        ) => form.setValue("role", value)}
                       >
                         <SelectTrigger
                           data-testid="select-role"
@@ -108,20 +127,31 @@ export function WaitlistForm() {
                           <SelectValue placeholder="Select your role" />
                         </SelectTrigger>
                         <SelectContent className="rounded-xl">
-                          <SelectItem value="Client">Client / Enterprise</SelectItem>
-                          <SelectItem value="Freelancer">Freelancer / Agency</SelectItem>
-                          <SelectItem value="Investor">Investor / Capital</SelectItem>
+                          <SelectItem value="Client">
+                            Client / Enterprise
+                          </SelectItem>
+                          <SelectItem value="Freelancer">
+                            Freelancer / Agency
+                          </SelectItem>
+                          <SelectItem value="Investor">
+                            Investor / Capital
+                          </SelectItem>
                         </SelectContent>
                       </Select>
                       {form.formState.errors.role && (
-                        <p className="text-sm text-destructive">{form.formState.errors.role.message}</p>
+                        <p className="text-sm text-destructive">
+                          {form.formState.errors.role.message}
+                        </p>
                       )}
                     </div>
 
                     {/* City + Industry */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div className="space-y-1.5">
-                        <Label htmlFor="city" className="text-foreground/80 text-sm font-medium">
+                        <Label
+                          htmlFor="city"
+                          className="text-foreground/80 text-sm font-medium"
+                        >
                           City <span className="text-destructive">*</span>
                         </Label>
                         <Input
@@ -132,11 +162,16 @@ export function WaitlistForm() {
                           {...form.register("city")}
                         />
                         {form.formState.errors.city && (
-                          <p className="text-sm text-destructive">{form.formState.errors.city.message}</p>
+                          <p className="text-sm text-destructive">
+                            {form.formState.errors.city.message}
+                          </p>
                         )}
                       </div>
                       <div className="space-y-1.5">
-                        <Label htmlFor="category" className="text-foreground/80 text-sm font-medium">
+                        <Label
+                          htmlFor="category"
+                          className="text-foreground/80 text-sm font-medium"
+                        >
                           Industry <span className="text-destructive">*</span>
                         </Label>
                         <Input
@@ -147,7 +182,9 @@ export function WaitlistForm() {
                           {...form.register("category")}
                         />
                         {form.formState.errors.category && (
-                          <p className="text-sm text-destructive">{form.formState.errors.category.message}</p>
+                          <p className="text-sm text-destructive">
+                            {form.formState.errors.category.message}
+                          </p>
                         )}
                       </div>
                     </div>
@@ -199,9 +236,12 @@ export function WaitlistForm() {
                   <CheckCircle2 size={32} strokeWidth={1.5} />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold font-display text-foreground mb-2">Position Secured</h3>
+                  <h3 className="text-2xl font-bold font-display text-foreground mb-2">
+                    Position Secured
+                  </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
-                    You're on the FreeTrust priority waitlist. We'll notify you the moment access opens for your role.
+                    You're on the FreeTrust priority waitlist. We'll notify you
+                    the moment access opens for your role.
                   </p>
                 </div>
                 <Button

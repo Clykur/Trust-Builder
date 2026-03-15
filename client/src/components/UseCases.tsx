@@ -1,16 +1,62 @@
 import { motion } from "framer-motion";
-import { Building2, Briefcase, Users, Code, Palette, Scale, MapPin, Tv, FileText } from "lucide-react";
+import {
+  Building2,
+  Briefcase,
+  Users,
+  Code,
+  Palette,
+  Scale,
+  MapPin,
+  Tv,
+  FileText,
+} from "lucide-react";
 
 const useCases = [
-  { icon: Code, title: "Developers & Engineers", desc: "Ship code with automatic payment on merge. No more chasing invoices." },
-  { icon: Palette, title: "Designers & Creatives", desc: "Protect your intellectual property until final, verified payout." },
-  { icon: Scale, title: "Legal & Consultants", desc: "Standardize every advisory engagement with a smart contract." },
-  { icon: Building2, title: "Startups & SMBs", desc: "Scale quickly without the risk of scams, bad hires, or lost deposits." },
-  { icon: Briefcase, title: "Agencies", desc: "Manage sub-contractors with automated verification and secure escrow." },
-  { icon: Users, title: "Remote Teams", desc: "Collaborate across borders with absolute financial and legal security." },
-  { icon: Tv, title: "Content Creators", desc: "Define scope, deliver, and get paid with a contract that protects you." },
-  { icon: MapPin, title: "Local Freelancers", desc: "Build reputation in your city backed by cryptographic proof." },
-  { icon: FileText, title: "Writers & Researchers", desc: "Milestone-based payments tied to verified delivery, every time." },
+  {
+    icon: Code,
+    title: "Developers & Engineers",
+    desc: "Ship code with automatic payment on merge. No more chasing invoices.",
+  },
+  {
+    icon: Palette,
+    title: "Designers & Creatives",
+    desc: "Protect your intellectual property until final, verified payout.",
+  },
+  {
+    icon: Scale,
+    title: "Legal & Consultants",
+    desc: "Standardize every advisory engagement with a smart contract.",
+  },
+  {
+    icon: Building2,
+    title: "Startups & SMBs",
+    desc: "Scale quickly without the risk of scams, bad hires, or lost deposits.",
+  },
+  {
+    icon: Briefcase,
+    title: "Agencies",
+    desc: "Manage sub-contractors with automated verification and secure escrow.",
+  },
+  {
+    icon: Users,
+    title: "Remote Teams",
+    desc: "Collaborate across borders with absolute financial and legal security.",
+  },
+  {
+    icon: Tv,
+    title: "Content Creators",
+    desc: "Define scope, deliver, and get paid with a contract that protects you.",
+  },
+  {
+    icon: MapPin,
+    title: "Local Freelancers",
+    desc: "Build reputation in your city backed by cryptographic proof.",
+  },
+  {
+    icon: FileText,
+    title: "Writers & Researchers",
+    desc: "Milestone-based payments tied to verified delivery, every time.",
+  },
 ];
 
 export function UseCases() {
@@ -25,10 +71,12 @@ export function UseCases() {
         >
           <span className="pill-badge mb-6 inline-flex">Use Cases</span>
           <h2 className="text-3xl md:text-5xl font-bold font-display mb-5 mt-4">
-            Built for Every <br />Knowledge Worker
+            Built for Every <br />
+            Knowledge Worker
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            FreeTrust adapts to how you work, regardless of your industry or role.
+            FreeTrust adapts to how you work, regardless of your industry or
+            role.
           </p>
         </motion.div>
 
@@ -46,8 +94,12 @@ export function UseCases() {
                 <uc.icon size={20} />
               </div>
               <div>
-                <div className="font-bold text-sm text-foreground mb-1">{uc.title}</div>
-                <div className="text-xs text-muted-foreground leading-relaxed">{uc.desc}</div>
+                <div className="font-bold text-sm text-foreground mb-1">
+                  {uc.title}
+                </div>
+                <div className="text-xs text-muted-foreground leading-relaxed">
+                  {uc.desc}
+                </div>
               </div>
             </motion.div>
           ))}
