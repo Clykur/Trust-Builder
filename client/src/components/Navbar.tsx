@@ -13,6 +13,7 @@ const navLinks = [
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeId, setActiveId] = useState<string | null>(null);
 
   useEffect(() => {
     const onScroll = () => {
@@ -21,6 +22,23 @@ export function Navbar() {
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const observers: IntersectionObserver[] = [];
+    navLinks.forEach(({ id }) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const obs = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) setActiveId(id);
+        },
+        { rootMargin: "-40% 0px -50% 0px", threshold: 0 }
+      );
+      obs.observe(el);
+      observers.push(obs);
+    });
+    return () => observers.forEach((obs) => obs.disconnect());
   }, []);
 
   const scrollTo = (id: string) => {
@@ -57,15 +75,22 @@ export function Navbar() {
 
           {/* Desktop nav links */}
           <nav className="hidden md:flex items-center gap-1">
-            {navLinks.map((link) => (
-              <button
-                key={link.id}
-                onClick={() => scrollTo(link.id)}
-                className="px-4 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-foreground/5 transition-all duration-150"
-              >
-                {link.label}
-              </button>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = activeId === link.id;
+              return (
+                <button
+                  key={link.id}
+                  onClick={() => scrollTo(link.id)}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-150 ${
+                    isActive
+                      ? "text-primary bg-primary/8 font-semibold"
+                      : "text-muted-foreground hover:text-foreground hover:bg-foreground/5"
+                  }`}
+                >
+                  {link.label}
+                </button>
+              );
+            })}
           </nav>
 
           {/* Desktop CTA + Mobile menu toggle */}
@@ -98,15 +123,22 @@ export function Navbar() {
               transition={{ duration: 0.18 }}
               className="absolute top-full left-4 right-4 mt-1 rounded-2xl glass-panel py-2 overflow-hidden"
             >
-              {navLinks.map((link) => (
-                <button
-                  key={link.id}
-                  onClick={() => scrollTo(link.id)}
-                  className="w-full text-left px-5 py-3 text-sm font-medium text-foreground hover:bg-foreground/5 transition-colors"
-                >
-                  {link.label}
-                </button>
-              ))}
+              {navLinks.map((link) => {
+                const isActive = activeId === link.id;
+                return (
+                  <button
+                    key={link.id}
+                    onClick={() => scrollTo(link.id)}
+                    className={`w-full text-left px-5 py-3 text-sm font-medium transition-colors ${
+                      isActive
+                        ? "text-primary bg-primary/8 font-semibold"
+                        : "text-foreground hover:bg-foreground/5"
+                    }`}
+                  >
+                    {link.label}
+                  </button>
+                );
+              })}
               <div className="px-4 pb-3 pt-2 border-t border-border/40 mt-1">
                 <Button
                   onClick={() => scrollTo("validation-section")}
