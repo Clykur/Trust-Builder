@@ -74,7 +74,9 @@ export async function getApp() {
     return res.status(status).json({ message });
   });
 
-  if (process.env.NODE_ENV === "production") {
+  if (process.env.VERCEL) {
+    // On Vercel, static files and SPA are served by the platform; only API routes run here
+  } else if (process.env.NODE_ENV === "production") {
     serveStatic(app);
   } else {
     const { setupVite } = await import("./vite");
