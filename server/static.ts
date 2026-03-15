@@ -33,9 +33,9 @@ export function serveStatic(app: Express) {
     })
   );
 
-  // Serve index.html for / and every other non-file route with strict HTML headers
-  // so the browser always renders the page instead of downloading
-  app.get("*", (_req, res) => {
+  // SPA fallback: serve index.html for non-API, non-file routes (middleware avoids path-to-regexp issues)
+  app.use((req, res, next) => {
+    if (req.path.startsWith("/api")) return next();
     htmlHeaders(res);
     res.send(indexHtml);
   });
