@@ -1,7 +1,7 @@
 /**
  * Vercel serverless handler for /api/waitlist.
  * Forwards the request to the Express app so POST /api/waitlist is handled.
- * Uses createRequire because package.json has "type": "module" (ESM) and dist/index.cjs is CJS.
+ * Reads body and sets req.body so Express receives it (Vercel req stream may not work with express.json).
  */
 import { createRequire } from "node:module";
 
@@ -17,7 +17,25 @@ function getAppPromise() {
   return appPromise;
 }
 
+function readBody(req) {
+  return new Promise((resolve) => {
+    let data = "";
+    req.on("data", (chunk) => (data += chunk));
+    req.on("end", () => {
+      try {
+        resolve(data ? JSON.parse(data) : {});
+      } catch {
+        resolve({});
+      }
+    });
+    req.on("error", () => resolve({}));
+  });
+}
+
 export default async function handler(req, res) {
+  if (req.method === "POST" && !req.body) {
+    req.body = await readBody(req);
+  }
   const { app } = await getAppPromise();
   app(req, res);
 }

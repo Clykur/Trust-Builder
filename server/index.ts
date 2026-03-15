@@ -18,13 +18,30 @@ export async function getApp() {
   const app = express();
   const httpServer = createServer(app);
 
-  app.use(
-    express.json({
-    verify: (req, _res, buf) => {
-      req.rawBody = buf;
-    },
-    }),
-  );
+  // On Vercel, body may be pre-set by the serverless handler; only parse if not set
+  if (process.env.VERCEL) {
+    app.use((req, res, next) => {
+      if (req.body != null) return next();
+      let data = "";
+      req.on("data", (chunk: Buffer) => (data += chunk));
+      req.on("end", () => {
+        try {
+          req.body = data ? JSON.parse(data) : {};
+        } catch {
+          req.body = {};
+        }
+        next();
+      });
+    });
+  } else {
+    app.use(
+      express.json({
+        verify: (req, _res, buf) => {
+          req.rawBody = buf;
+        },
+      }),
+    );
+  }
 
   app.use(express.urlencoded({ extended: false }));
 
