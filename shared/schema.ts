@@ -13,17 +13,19 @@ export const waitlist = pgTable("waitlist", {
 });
 
 // === BASE SCHEMAS ===
-export const insertWaitlistSchema = createInsertSchema(waitlist).omit({ 
-  id: true, 
-  createdAt: true 
-}).extend({
-  email: z.string().email("Please enter a valid email address"),
-  role: z.enum(["Client", "Freelancer", "Investor"], {
-    required_error: "Please select a role",
-  }),
-  city: z.string().min(1, "Please enter your city"),
-  category: z.string().min(1, "Please enter your industry"),
-});
+export const insertWaitlistSchema = createInsertSchema(waitlist)
+  .omit({
+    id: true,
+    createdAt: true,
+  })
+  .extend({
+    email: z.string().email("Please enter a valid email address"),
+    role: z.enum(["Client", "Freelancer", "Investor"], {
+      required_error: "Please select a role",
+    }),
+    city: z.string().min(1, "Please enter your city"),
+    category: z.string().min(1, "Please enter your industry"),
+  });
 
 // === EXPLICIT API CONTRACT TYPES ===
 export type WaitlistEntry = typeof waitlist.$inferSelect;

@@ -33,7 +33,7 @@ export function Navbar() {
         ([entry]) => {
           if (entry.isIntersecting) setActiveId(id);
         },
-        { rootMargin: "-40% 0px -50% 0px", threshold: 0 }
+        { rootMargin: "-40% 0px -50% 0px", threshold: 0 },
       );
       obs.observe(el);
       observers.push(obs);
@@ -70,7 +70,9 @@ export function Navbar() {
             <div className="w-8 h-8 rounded-xl bg-primary flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-all duration-200">
               <ShieldCheck size={17} strokeWidth={2.5} />
             </div>
-            <span className="font-display font-bold text-lg tracking-tight text-foreground">FreeTrust</span>
+            <span className="font-calegar font-normal text-lg tracking-tight text-foreground uppercase">
+              F r e e T r u s t
+            </span>
           </button>
 
           {/* Desktop nav links */}

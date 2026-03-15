@@ -5,7 +5,9 @@ import * as schema from "@shared/schema";
 const { Pool } = pg;
 
 const connectionString = process.env.DATABASE_URL;
-const useSupabase = !!(process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY);
+const useSupabase = !!(
+  process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY
+);
 
 if (!connectionString && !useSupabase) {
   throw new Error(

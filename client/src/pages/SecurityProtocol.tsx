@@ -4,7 +4,7 @@ import { ShieldCheck, ArrowLeft } from "lucide-react";
 const sections = [
   {
     title: "1. Overview",
-    content: `FreeTrust Network Private Limited is incorporated and operates from Bengaluru, Karnataka, India. Our platform is built on a security-first architecture designed to meet and exceed the standards prescribed by the Information Technology Act, 2000 ("IT Act"), the IT (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011 ("SPDI Rules"), CERT-In guidelines, and RBI directions on payment system security.\n\nEvery layer of our platform — from client-side interfaces to escrow payment flows and blockchain reputation storage — has been designed with the assumption that threats exist and must be mitigated proactively. This document describes the technical and organisational security measures FreeTrust employs to protect user data, funds, and platform integrity.`,
+    content: `clykur operates from Bengaluru, Karnataka, India. Our platform is built on a security-first architecture designed to meet and exceed the standards prescribed by the Information Technology Act, 2000 ("IT Act"), the IT (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011 ("SPDI Rules"), CERT-In guidelines, and RBI directions on payment system security.\n\nEvery layer of our platform — from client-side interfaces to escrow payment flows and blockchain reputation storage — has been designed with the assumption that threats exist and must be mitigated proactively. This document describes the technical and organisational security measures FreeTrust employs to protect user data, funds, and platform integrity.`,
   },
   {
     title: "2. Infrastructure Security",
@@ -48,11 +48,11 @@ const sections = [
   },
   {
     title: "12. Responsible Disclosure",
-    content: `We encourage security researchers to report vulnerabilities responsibly. If you discover a security issue in FreeTrust's platform:\n\n• Email security@freetrust.network with a detailed description of the vulnerability.\n• Do not exploit the vulnerability or access user data beyond what is necessary to demonstrate the issue. Unauthorised access to computer systems is a criminal offence under Section 43 and Section 66 of the IT Act, 2000.\n• Give us reasonable time (90 days) to investigate and remediate before public disclosure.\n• We will acknowledge receipt within 24 hours and provide regular updates on remediation progress.\n• Researchers who report valid, in-scope vulnerabilities in good faith may be eligible for recognition in our security acknowledgements page.`,
+    content: `We encourage security researchers to report vulnerabilities responsibly. If you discover a security issue in FreeTrust's platform:\n\n• Email info@clykur.com with a detailed description of the vulnerability.\n• Do not exploit the vulnerability or access user data beyond what is necessary to demonstrate the issue. Unauthorised access to computer systems is a criminal offence under Section 43 and Section 66 of the IT Act, 2000.\n• Give us reasonable time (90 days) to investigate and remediate before public disclosure.\n• We will acknowledge receipt within 24 hours and provide regular updates on remediation progress.\n• Researchers who report valid, in-scope vulnerabilities in good faith may be eligible for recognition in our security acknowledgements page.`,
   },
   {
     title: "13. Regulatory Compliance",
-    content: `FreeTrust is designed to comply with applicable Indian regulations and international standards including:\n\n• Information Technology Act, 2000 and IT (Amendment) Act, 2008.\n• IT (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011.\n• Digital Personal Data Protection Act, 2023 (DPDP Act).\n• Prevention of Money Laundering Act, 2002 (PMLA) and PMLA Rules.\n• RBI Master Directions on KYC, Payment Aggregators, and Digital Payment Security Controls.\n• CERT-In Directions on Cyber Security Incident Reporting (April 2022) and security audit framework.\n• Goods and Services Tax (GST) Act, 2017 for all platform transactions.\n• ISO/IEC 27001 Information Security Management System (ISMS) — certification in progress.\n\nFor compliance-related enquiries, contact compliance@freetrust.network.`,
+    content: `FreeTrust is designed to comply with applicable Indian regulations and international standards including:\n\n• Information Technology Act, 2000 and IT (Amendment) Act, 2008.\n• IT (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011.\n• Digital Personal Data Protection Act, 2023 (DPDP Act).\n• Prevention of Money Laundering Act, 2002 (PMLA) and PMLA Rules.\n• RBI Master Directions on KYC, Payment Aggregators, and Digital Payment Security Controls.\n• CERT-In Directions on Cyber Security Incident Reporting (April 2022) and security audit framework.\n• Goods and Services Tax (GST) Act, 2017 for all platform transactions.\n• ISO/IEC 27001 Information Security Management System (ISMS) — certification in progress.\n\nFor compliance-related enquiries, contact info@clykur.com.`,
   },
 ];
 
@@ -65,9 +65,14 @@ export default function SecurityProtocol() {
             <div className="w-8 h-8 rounded-xl bg-primary flex items-center justify-center text-white shadow-sm">
               <ShieldCheck size={17} strokeWidth={2.5} />
             </div>
-            <span className="font-display font-bold text-lg tracking-tight">FreeTrust</span>
+            <span className="font-display font-bold text-lg tracking-tight">
+              FreeTrust
+            </span>
           </Link>
-          <Link href="/" className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors">
+          <Link
+            href="/"
+            className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
+          >
             <ArrowLeft size={15} />
             Back to home
           </Link>
@@ -77,17 +82,28 @@ export default function SecurityProtocol() {
       <main className="container mx-auto px-4 max-w-4xl py-14 md:py-20">
         <div className="mb-12">
           <span className="pill-badge mb-5 inline-flex">Security</span>
-          <h1 className="text-3xl md:text-5xl font-bold font-display mt-4 mb-4">Security Protocol</h1>
-          <p className="text-muted-foreground">Last updated: March 15, 2026 · Governed by the laws of India</p>
+          <h1 className="text-3xl md:text-5xl font-bold font-display mt-4 mb-4">
+            Security Protocol
+          </h1>
+          <p className="text-muted-foreground">
+            Last updated: March 15, 2026 · Governed by the laws of India
+          </p>
         </div>
 
         <div className="space-y-10">
           {sections.map((sec, i) => (
-            <div key={i} className="border-b border-border/40 pb-10 last:border-0">
-              <h2 className="text-xl font-bold font-display text-foreground mb-4">{sec.title}</h2>
+            <div
+              key={i}
+              className="border-b border-border/40 pb-10 last:border-0"
+            >
+              <h2 className="text-xl font-bold font-display text-foreground mb-4">
+                {sec.title}
+              </h2>
               <div className="text-muted-foreground leading-relaxed text-sm space-y-3">
                 {sec.content.split("\n\n").map((para, j) => (
-                  <p key={j} className="whitespace-pre-line">{para}</p>
+                  <p key={j} className="whitespace-pre-line">
+                    {para}
+                  </p>
                 ))}
               </div>
             </div>
@@ -97,10 +113,22 @@ export default function SecurityProtocol() {
 
       <footer className="border-t border-border/40 py-8 mt-8">
         <div className="container mx-auto px-4 max-w-4xl flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-muted-foreground">
-          <span>&copy; {new Date().getFullYear()} FreeTrust Network Private Limited. All rights reserved.</span>
+          <span>
+            &copy; {new Date().getFullYear()} clykur. All rights reserved.
+          </span>
           <div className="flex gap-5">
-            <Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
+            <Link
+              href="/privacy"
+              className="hover:text-primary transition-colors"
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              href="/terms"
+              className="hover:text-primary transition-colors"
+            >
+              Terms of Service
+            </Link>
           </div>
         </div>
       </footer>

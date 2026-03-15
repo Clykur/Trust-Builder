@@ -6,17 +6,18 @@ import { z } from "zod";
 
 export async function registerRoutes(
   httpServer: Server,
-  app: Express
+  app: Express,
 ): Promise<Server> {
-  
   app.post(api.waitlist.create.path, async (req, res) => {
     try {
       const input = api.waitlist.create.input.parse(req.body);
-      
+
       // Check if email already exists
       const existing = await storage.getWaitlistEntryByEmail(input.email);
       if (existing) {
-        return res.status(409).json({ message: "This email is already on the waitlist." });
+        return res
+          .status(409)
+          .json({ message: "This email is already on the waitlist." });
       }
 
       const entry = await storage.createWaitlistEntry(input);
@@ -25,7 +26,7 @@ export async function registerRoutes(
       if (err instanceof z.ZodError) {
         return res.status(400).json({
           message: err.errors[0].message,
-          field: err.errors[0].path.join('.'),
+          field: err.errors[0].path.join("."),
         });
       }
       return res.status(500).json({ message: "Internal server error" });

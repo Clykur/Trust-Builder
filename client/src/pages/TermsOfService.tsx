@@ -12,7 +12,7 @@ const sections = [
   },
   {
     title: "3. Account Registration and Security",
-    content: `You are responsible for maintaining the confidentiality of your login credentials and for all activity that occurs under your account. You agree to:\n\n• Provide accurate and truthful registration information, including a valid Indian mobile number and PAN/Aadhaar as required.\n• Keep your password and OTP credentials secure and not share them with third parties.\n• Notify us immediately at support@freetrust.network of any unauthorised use of your account.\n• Not create multiple accounts or accounts on behalf of others without authorisation.\n• Comply with all applicable cyber security practices as recommended by CERT-In.\n\nFreeTrust is not liable for any loss or damage arising from your failure to comply with these obligations.`,
+    content: `You are responsible for maintaining the confidentiality of your login credentials and for all activity that occurs under your account. You agree to:\n\n• Provide accurate and truthful registration information, including a valid Indian mobile number and PAN/Aadhaar as required.\n• Keep your password and OTP credentials secure and not share them with third parties.\n• Notify us immediately at info@clykur.com of any unauthorised use of your account.\n• Not create multiple accounts or accounts on behalf of others without authorisation.\n• Comply with all applicable cyber security practices as recommended by CERT-In.\n\nFreeTrust is not liable for any loss or damage arising from your failure to comply with these obligations.`,
   },
   {
     title: "4. Smart Contracts and Agreements",
@@ -56,7 +56,7 @@ const sections = [
   },
   {
     title: "14. Contact",
-    content: `For questions about these Terms, contact us at:\n\nFreeTrust Network Private Limited\nBengaluru, Karnataka, India\nlegal@freetrust.network`,
+    content: `For questions about these Terms, contact us at:\n\nclykur\nBengaluru, Karnataka, India\ninfo@clykur.com`,
   },
 ];
 
@@ -69,9 +69,14 @@ export default function TermsOfService() {
             <div className="w-8 h-8 rounded-xl bg-primary flex items-center justify-center text-white shadow-sm">
               <ShieldCheck size={17} strokeWidth={2.5} />
             </div>
-            <span className="font-display font-bold text-lg tracking-tight">FreeTrust</span>
+            <span className="font-display font-bold text-lg tracking-tight">
+              FreeTrust
+            </span>
           </Link>
-          <Link href="/" className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors">
+          <Link
+            href="/"
+            className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
+          >
             <ArrowLeft size={15} />
             Back to home
           </Link>
@@ -81,17 +86,28 @@ export default function TermsOfService() {
       <main className="container mx-auto px-4 max-w-4xl py-14 md:py-20">
         <div className="mb-12">
           <span className="pill-badge mb-5 inline-flex">Legal</span>
-          <h1 className="text-3xl md:text-5xl font-bold font-display mt-4 mb-4">Terms of Service</h1>
-          <p className="text-muted-foreground">Last updated: March 15, 2026 · Governed by the laws of India</p>
+          <h1 className="text-3xl md:text-5xl font-bold font-display mt-4 mb-4">
+            Terms of Service
+          </h1>
+          <p className="text-muted-foreground">
+            Last updated: March 15, 2026 · Governed by the laws of India
+          </p>
         </div>
 
         <div className="space-y-10">
           {sections.map((sec, i) => (
-            <div key={i} className="border-b border-border/40 pb-10 last:border-0">
-              <h2 className="text-xl font-bold font-display text-foreground mb-4">{sec.title}</h2>
+            <div
+              key={i}
+              className="border-b border-border/40 pb-10 last:border-0"
+            >
+              <h2 className="text-xl font-bold font-display text-foreground mb-4">
+                {sec.title}
+              </h2>
               <div className="text-muted-foreground leading-relaxed text-sm space-y-3">
                 {sec.content.split("\n\n").map((para, j) => (
-                  <p key={j} className="whitespace-pre-line">{para}</p>
+                  <p key={j} className="whitespace-pre-line">
+                    {para}
+                  </p>
                 ))}
               </div>
             </div>
@@ -101,10 +117,22 @@ export default function TermsOfService() {
 
       <footer className="border-t border-border/40 py-8 mt-8">
         <div className="container mx-auto px-4 max-w-4xl flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-muted-foreground">
-          <span>&copy; {new Date().getFullYear()} FreeTrust Network Private Limited. All rights reserved.</span>
+          <span>
+            &copy; {new Date().getFullYear()} clykur. All rights reserved.
+          </span>
           <div className="flex gap-5">
-            <Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
-            <Link href="/security" className="hover:text-primary transition-colors">Security Protocol</Link>
+            <Link
+              href="/privacy"
+              className="hover:text-primary transition-colors"
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              href="/security"
+              className="hover:text-primary transition-colors"
+            >
+              Security Protocol
+            </Link>
           </div>
         </div>
       </footer>

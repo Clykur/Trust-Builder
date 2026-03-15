@@ -30,7 +30,7 @@ export function serveStatic(app: Express) {
           htmlHeaders(res);
         }
       },
-    })
+    }),
   );
 
   // SPA fallback: serve index.html for non-API, non-file routes (middleware avoids path-to-regexp issues)
